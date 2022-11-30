@@ -1,0 +1,65 @@
+footer{
+    margin-top: auto;
+    background-color: #ECF0F1;
+    height: 20vh;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div .__derechos{
+    font-size: 1.1rem;
+    font-weight: 710;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+footer .derechos{
+    width: 30%;
+}
+
+footer div .__descripcion{
+    font-size: .9rem;
+    font-weight: 610;
+    text-align: justify;
+}
+
+footer .contacto{
+    text-align: right;
+}
+
+footer .contacto .__titulo{
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin-bottom: 1rem;
+}
+
+footer .contacto .__titulo i{
+    font-size: 1.2rem;
+    margin-right: .3rem;
+    color: #2ECC71;
+}
+
+footer .contacto ul{
+    list-style: none;
+}
+footer .contacto ul a{
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: .5px;
+    font-weight: 610;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+footer .contacto ul a i{
+    font-size: 1rem;
+    margin-right: .3rem;
+}
+
+footer .contacto ul a:hover{
+    font-size: 1rem;
+    margin-right: .3rem;
+    color: #3498DB;
+}
+

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ControladorVistas;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ControladorVistas::class, 'viajes'])->name('viajes');
+
+Route::get('solicitudes', [ControladorVistas::class, 'solicitudes'])->name('solicitudes');
+
+Route::get('historial', [ControladorVistas::class, 'historial'])->name('historial');
