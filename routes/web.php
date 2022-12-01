@@ -1,20 +1,17 @@
 <?php
 
+use App\Http\Controllers\autosControlador;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControladorVistas;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\historialControlador;
+use App\Http\Controllers\solicitudesControlador;
+use App\Http\Controllers\viajesControlador;
 
-Route::get('/', [ControladorVistas::class, 'viajes'])->name('viajes');
+Route::get('/', [viajesControlador::class, 'index'])->name('viajes');
+Route::get('viajes/crear', [viajesControlador::class, 'create'])->name('viajes.crear');
 
-Route::get('solicitudes', [ControladorVistas::class, 'solicitudes'])->name('solicitudes');
+Route::get('autos/agregar', [autosControlador::class, 'create'])->name('viajes.auto.agregar');
+Route::get('autos/consultar', [autosControlador::class, 'show'])->name('viajes.auto.consultar');
 
-Route::get('historial', [ControladorVistas::class, 'historial'])->name('historial');
+Route::get('solicitudes', [solicitudesControlador::class, 'index'])->name('solicitudes');
+
+Route::get('historial', [historialControlador::class, 'index'])->name('historial');
