@@ -1,0 +1,73 @@
+.__opciones-viajes{
+    padding: 0 1.3vh .7rem 1.3vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.__opciones-viajes div {
+    width: 50%;
+}
+.__opciones-viajes .__opc-pasajero {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: .5rem;
+}
+.__opciones-viajes .__opc-conductor {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.__opciones-viajes .__opc-pasajero .__btn{
+    padding: .5rem 1.5rem;
+    background-color: rgb(197, 197, 197);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+.__opciones-viajes .__opc-pasajero .__todos{
+    background-color: #B2BABB;
+    border-radius: 12px 0 0 12px;
+    border-right: 3px solid #1A5276;
+}
+.__opciones-viajes .__opc-pasajero .__mis-viajes{
+    background-color: #B2BABB;
+    border-radius: 0 12px 12px 0;
+}
+.__opciones-viajes .__opc-pasajero a:hover{
+    background-color: #3498DB;
+}
+.__opciones-viajes .__opc-pasajero .opc-activo{
+    background-color: #3498DB;
+}
+
+.__opciones-viajes .__opc-conductor .__btn{
+    margin: 0 .2rem;
+    padding: .5rem 1.5rem;
+    background-color: rgb(197, 197, 197);
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.__opciones-viajes .__opc-conductor .__btn:hover{
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.__opciones-viajes .__opc-conductor .__agregarViaje{
+    background-color: #1ABC9C;
+}
+
+.__opciones-viajes .__opc-conductor .__agregarAuto{
+    background-color: #1ABC9C;
+}
+
+.__opciones-viajes .__opc-conductor .__consultarAutos{
+    background-color: #F39C12;
+}
