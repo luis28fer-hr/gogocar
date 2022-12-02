@@ -16,6 +16,9 @@
     height: 40%;
     background-color:#FFFFFF;
 }
+.__tarjeta .__img-autos{
+    height: 40%;
+}
 .__tarjeta .__img img{
     width: 100%;
     height: 100%;
@@ -23,6 +26,10 @@
 }
 .__tarjeta .__descripcion{
     height: 50%;
+    padding: .5rem 1rem 0rem 1rem;
+}
+.__tarjeta .__descripcion-autos{
+    height: 45%;
     padding: .5rem 1rem 0rem 1rem;
 }
 
@@ -43,6 +50,15 @@
     justify-content: space-between;
     padding: 0 1rem;
 }
+
+.__tarjeta .__autos{
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
 .__tarjeta .__botones .__mensaje{
     width: 15%;
     text-align: center;
@@ -52,6 +68,7 @@
     color: #28B463;
     transition: all .3s ease;
 }
+
 .__tarjeta .__botones .__mensaje:hover{
     transform: translateY(-2px)
 }
@@ -68,8 +85,8 @@
     background-color: #888888;
     color: #FFFFFF;
     transition: all .3s ease;
-
 }
+
 .__tarjeta .__botones .__solicitar:hover{
     transform: translateY(-2px);
 }
@@ -120,4 +137,21 @@
 
 .__normalBorde{
     outline: 5px solid #AAB7B8;
+}
+
+
+/* Variaciones de la tarjeta autos */
+.__tarjeta .__botones .__eliminar{
+    width: 15%;
+    text-align: center;
+    padding: 0.2rem 0.2rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 4px solid #EC7063;
+    color: #EC7063;
+    transition: all .3s ease;
+}
+
+.__tarjeta .__botones .__editar{
+    background-color: #F39C12;
 }

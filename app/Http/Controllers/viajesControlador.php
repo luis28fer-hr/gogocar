@@ -10,13 +10,15 @@ class viajesControlador extends Controller
     {
         return view('viajes.consulta_viajes');
     }
-    public function create()
+    public function solicitar()
     {
-        return view('viajes.crearViaje');
+
+        return redirect('solicitudes')->with('viajeSolicitado', 'mensaje');
     }
     public function store(Request $request)
     {
-        //
+
+        return redirect('/')->with('viajeCreado', 'mensaje');
     }
 
     public function show($id)

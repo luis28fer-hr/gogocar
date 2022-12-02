@@ -151,7 +151,7 @@
             </div>
         </div>
         <div class="__botones">
-            <a href=""><i class="fa-solid fa-xmark"></i> Cancelar</a>
+            <a href="#modal-cancelarViaje"><i class="fa-solid fa-xmark"></i> Cancelar</a>
         </div>
     </div>
 </div>
@@ -303,7 +303,7 @@
             </div>
         </div>
         <div class="__botones">
-            <a href=""><i class="fa-solid fa-xmark"></i> Cancelar</a>
+            <a href="#modal-cancelarViaje"><i class="fa-solid fa-xmark"></i> Cancelar</a>
         </div>
     </div>
 </div>

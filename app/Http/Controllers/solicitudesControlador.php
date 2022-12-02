@@ -12,6 +12,11 @@ class solicitudesControlador extends Controller
         return view('solicitudes.consulta_solicitudes');
     }
 
+    public function cancelar()
+    {
+        return redirect('solicitudes')->with('solicitudCancelado', 'mensaje');
+    }
+
     public function create()
     {
         //
