@@ -12,16 +12,18 @@ class autosControlador extends Controller
     }
     public function create()
     {
-        return view('viajes.agregarAuto');
+        return view('autos.agregarAuto');
     }
 
     public function store(Request $request)
     {
-        //
+
+        return redirect('autos/consultar')->with('autoCreado', 'mensaje');
     }
     public function show()
     {
-        return view('viajes.consultarAutos');
+
+        return view('autos.consultarAutos');
     }
 
     public function edit($id)
@@ -29,13 +31,15 @@ class autosControlador extends Controller
         //
     }
 
-    public function update(Request $request, $id)
+    public function update()
     {
-        //
+
+        return redirect('autos/consultar')->with('autoEditado', 'mensaje');
     }
 
-    public function destroy($id)
+    public function destroy()
     {
-        //
+
+        return redirect('autos/consultar')->with('autoEliminado', 'mensaje');
     }
 }

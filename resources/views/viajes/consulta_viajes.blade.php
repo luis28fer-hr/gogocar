@@ -34,7 +34,7 @@
             </div>
             <div class="__botones">
                 <a class="__mensaje" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a class="__solicitar __activoBoton" href=""><i class="fa-solid fa-car"></i> Solicitar</a>
+                <a class="__solicitar __activoBoton" href="#modal-solicitarViaje"><i class="fa-solid fa-car"></i> Solicitar</a>
             </div>
         </div>
         <div class="__tarjeta __activoBorde grid-item">
@@ -70,7 +70,7 @@
             </div>
             <div class="__botones">
                 <a class="__mensaje" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a class="__solicitar __activoBoton" href=""><i class="fa-solid fa-car"></i> Solicitar</a>
+                <a class="__solicitar __activoBoton" href="#modal-solicitarViaje"><i class="fa-solid fa-car"></i> Solicitar</a>
             </div>
         </div>
         <div class="__tarjeta __advertenciaBorde grid-item">
@@ -106,7 +106,7 @@
             </div>
             <div class="__botones">
                 <a class="__mensaje" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a class="__solicitar __advertenciaBoton" href=""><i class="fa-solid fa-car"></i> Solicitar</a>
+                <a class="__solicitar __advertenciaBoton" href="#modal-solicitarViaje"><i class="fa-solid fa-car"></i> Solicitar</a>
             </div>
         </div>
         <div class="__tarjeta __llenoBorde grid-item">
@@ -214,7 +214,7 @@
             </div>
             <div class="__botones">
                 <a class="__mensaje" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a class="__solicitar" href=""><i class="fa-solid fa-car"></i> Solicitar</a>
+                <a class="__solicitar" href="#modal-solicitarViaje"><i class="fa-solid fa-car"></i> Solicitar</a>
             </div>
         </div>
         <div class="__tarjeta grid-item">
@@ -250,7 +250,7 @@
             </div>
             <div class="__botones">
                 <a class="__mensaje" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a class="__solicitar" href=""><i class="fa-solid fa-car"></i> Solicitar</a>
+                <a class="__solicitar" href="#modal-solicitarViaje"><i class="fa-solid fa-car"></i> Solicitar</a>
             </div>
         </div>
         <div class="__tarjeta grid-item">
@@ -286,7 +286,7 @@
             </div>
             <div class="__botones">
                 <a class="__mensaje" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a class="__solicitar" href=""><i class="fa-solid fa-car"></i> Solicitar</a>
+                <a class="__solicitar" href="#modal-solicitarViaje"><i class="fa-solid fa-car"></i> Solicitar</a>
             </div>
         </div>
     </div>
