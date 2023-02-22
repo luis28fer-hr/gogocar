@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\autosControlador;
 use App\Http\Controllers\historialControlador;
 use App\Http\Controllers\solicitudesControlador;
 use App\Http\Controllers\viajesControlador;

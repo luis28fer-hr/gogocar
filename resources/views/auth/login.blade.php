@@ -40,7 +40,7 @@
             @endif
 
             <x-primary-button class="ml-3 dark:bg-green-300 dark:hover:bg-green-400">
-                {{ __('Log in') }}
+                {{ __('Iniciar sesión') }}
             </x-primary-button>
         </div>
     </form>
