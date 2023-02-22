@@ -1,0 +1,76 @@
+header{
+    position:fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: #F4F6F7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+header a{
+    text-decoration: none;
+    color: #000000;
+}
+ header .__titulo{
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-left: 2rem;
+ }
+ header .__titulo i{
+    color: #000000;
+    font-size: 1.1rem;
+    padding: 0 .3rem;
+    color: #2ECC71;
+ }
+
+
+header .__links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .__opciones{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+
+}
+
+header .__links li a{
+    padding: .2rem 2rem;
+    font-size: 1rem;
+    font-weight: 610;
+    transition: color 0.3s ease;
+}
+
+header .__opciones li{
+    padding: 0 .5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+header .__opciones .__salir{
+    color: #D90000;
+}
+
+header .__opciones .__perfil:hover{
+    color: #005DCD;
+}
+
+header .__links a:hover{
+    color: #2ECC71;
+    border-left: 4px solid #2ECC71;
+    margin-left: -4px;
+}
+
+header .__links .__link-Activo{
+    color: #2ECC71;
+    border-left: 4px solid #2ECC71;
+    margin-left: -4px;
+}

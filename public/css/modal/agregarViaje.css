@@ -1,0 +1,222 @@
+.modal{
+    position: fixed;
+    top: 2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    width: 35%;
+    max-height: 33rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0px 0px 100vh 100vh rgba(21, 67, 96, .5);
+    z-index: 100;
+    --opacity: 0;
+    --pointer: none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+
+    transition: opacity 0.8s ease;
+}
+
+.modal-agregarAuto{
+    max-height: 25rem;
+}
+
+.modal-eliminarAuto{
+    max-height: 15rem;
+}
+
+.modal-solicitarViaje{
+    max-height: 12rem;
+}
+
+
+
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+
+
+.modal .__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.modal .__header .__icon{
+    background-color: #D4E6F1;
+    border-radius: 300px;
+    padding: 0.6rem .9rem;
+    font-size: 2.2rem;
+    color: #2471A3;
+}
+
+.modal .__header .__icon-eliminar{
+    background-color: #FADBD8;
+    border-radius: 300px;
+    padding: 0.6rem .9rem;
+    font-size: 2.2rem;
+    color: #E74C3C;
+}
+
+.modal .__header .__icon-editar{
+    background-color: #FDEBD0;
+    border-radius: 300px;
+    padding: 0.6rem .9rem;
+    font-size: 2.2rem;
+    color: #F39C12;
+}
+
+.modal .__header .__cerrar{
+    font-size: 2rem;
+}
+
+.modal .__header .__cerrar a{
+    color: #95A5A6;
+}
+
+.modal .__body{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .__body .__titulo{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: .3rem;
+}
+
+.modal .__body div{
+    margin-bottom: .5rem;
+}
+
+.modal .__body div label{
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #616161;
+    margin-bottom: .1rem;
+}
+.modal .__body div input{
+    width: 97%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    color: #616161;
+    border: 3px solid;
+    border-color: rgba(91, 90, 91, .6);
+    border-radius: 5px;
+    padding: .3rem 0.3rem;
+}
+
+.modal .__body div select{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #616161;
+    margin-bottom: .2rem;
+    border: 3px solid;
+    border-color: rgba(91, 90, 91, .6);
+    border-radius: 5px;
+    padding: .3rem 0.3rem;
+}
+.modal .__body div select:focus{
+    outline: none;
+}
+
+.modal .__body div .__horario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal .__body div .__horario span{
+    padding: 0 .5rem;
+    font-weight: 600;
+}
+
+.modal .__body div .__dias{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -.6rem;
+}
+.modal .__body div .__dias div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal .__body div .__dias div span{
+    padding: 0 .5rem;
+    font-weight: 600;
+}
+
+.modal .__body input:focus{
+
+    outline: none;
+}
+
+.modal .__footer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 1rem;
+}
+
+
+.modal .__footer .__botones .__btn{
+    background-color: #FDFEFE;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: .5rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 0;
+}
+
+.modal .__footer .__botones .__cancelar{
+    border: 4px solid;
+    border-color: rgba(113, 125, 126, .5);
+    padding: .30rem 1.5rem;
+    color: #212F3D;
+    transition: all 0.5s ease;
+}
+
+.modal .__footer .__botones .__cancelar:hover{
+    border-color: rgba(113, 125, 126, .8);
+}
+
+
+.modal .__footer .__botones .__confirmar{
+    background-color: #2E86C1;
+    color: #FBFCFC;
+}
+
+.modal .__footer .__botones .__eliminar{
+    background-color: #E74C3C;
+    color: #FBFCFC;
+}
+
+.modal .__footer .__botones .__confirmar:hover{
+    background-color: #2874A6;
+}
+
+.modal .__footer .__botones .__eliminar:hover{
+    background-color: #CB4335;
+}
+
+.modal .__footer .__botones .__editar{
+    background-color: #F39C12;
+    color: #FBFCFC;
+}
+
+.modal .__footer .__botones .__editar:hover{
+    background-color: #D68910;
+}

@@ -1,0 +1,25 @@
+.viajes{
+    padding: 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem 20rem ;
+    align-items: flex-start;
+    justify-content: center;
+    padding: .5rem 0;
+  }
+
+.grid-container .grid-item{
+    text-align: center;
+    width: 94%;
+    height: 27rem;
+    margin: 0 0 2.5vh 1.5vh;
+  }
+
+  .grid-container .grid-item-autos{
+    text-align: center;
+    width: 94%;
+    height: 25rem;
+    margin: 0 0 2.5vh 1.5vh;
+  }

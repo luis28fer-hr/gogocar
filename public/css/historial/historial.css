@@ -1,0 +1,14 @@
+.historial{
+    padding: 1rem;
+}
+
+.historial .__bienvenida{
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.__historial{
+  width: 25%;
+  height: 25rem;
+}
