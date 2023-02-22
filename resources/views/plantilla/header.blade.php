@@ -10,11 +10,22 @@
     </ul>
 
     <ul class="__opciones">
-        <li><a class="__perfil" href="{{route('profile.edit')}}" title="Mi perfil">
-            <i class="fa-solid fa-user"></i>  {{ Auth::user()->name }}
+        <li><a class="__perfil" href="{{ route('profile.edit') }}" title="Mi perfil">
+                <i class="fa-solid fa-user"></i> {{ Auth::user()->name }}
             </a>
         </li>
 
-        <li><a class="__salir" href="" title="Cerrar Sesion"><i class="fa-solid fa-power-off"></i></a></li>
+        <li>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-dropdown-link :href="route('logout')"
+                    onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                    <i class="fa-solid fa-power-off __salir"></i>
+                </x-dropdown-link>
+            </form>
+        </li>
     </ul>
 </header>
+p
