@@ -1,5 +1,5 @@
 CREATE TABLE `viajes` (
-    `id` int PRIMARY KEY,
+    `id` int PRIMARY KEY AUTO_INCREMENT,
     `persona_ofrece_id` bigint,
     `automovil_id` int,
     `tipo_viaje_id` int,
@@ -9,23 +9,35 @@ CREATE TABLE `viajes` (
     `hora_llegada` datetime,
     `comentarios` varchar(255),
     `asientos_disponibles` tinyint,
-    `activo` boolean
+    `activo` boolean,
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `tiposViajes` (
-    `id` int PRIMARY KEY,
-    `descripcion` varchar(255)
+    `id` int PRIMARY KEY AUTO_INCREMENT,
+    `descripcion` varchar(255),
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `solicitudes` (
-    `id` int PRIMARY KEY,
+    `id` int PRIMARY KEY AUTO_INCREMENT,
     `viaje_id` int,
     `estatus_id` int,
     `usuario_id` int,
     `comentarios` varchar(255),
-    `fecha_solicitado` datetime
+    `fecha_solicitado` datetime,
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `estatusSolicitudes` (
-    `id` int PRIMARY KEY,
-    `descripcion` varchar(50)
+    `id` int PRIMARY KEY AUTO_INCREMENT,
+    `descripcion` varchar(50),
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `users` (
     `id` bigint PRIMARY KEY AUTO_INCREMENT,
@@ -42,25 +54,33 @@ CREATE TABLE `users` (
     `verificado` boolean,
     `email_verified_at` timestamp DEFAULT NULL,
     `created_at` timestamp DEFAULT NULL,
-    `updated_at` timestamp DEFAULT NULL
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `autos` (
-    `id` int PRIMARY KEY,
+    `id` int PRIMARY KEY AUTO_INCREMENT,
     `usuario_id` bigint,
     `placa` varchar(255),
     `marca` varchar(255),
     `modelo` varchar(255),
     `capacidad` tinyint,
     `no_seguro` varchar(255),
-    `verificado` boolean
+    `verificado` boolean,
+    `activo` boolean,
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `calificaciones` (
-    `id` int PRIMARY KEY,
+    `id` int PRIMARY KEY AUTO_INCREMENT,
     `viaje_id` int,
     `persona_califica_id` int,
     `persona_calificada_id` int,
     `puntuacion` tinyint,
-    `comentarios` varchar(255)
+    `comentarios` varchar(255),
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `failed_jobs` (
     `id` bigint PRIMARY KEY AUTO_INCREMENT,
@@ -69,12 +89,18 @@ CREATE TABLE `failed_jobs` (
     `queue` text NOT NULL,
     `payload` longtext NOT NULL,
     `exception` longtext NOT NULL,
-    `failed_at` timestamp NOT NULL
+    `failed_at` timestamp NOT NULL,
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `password_resets_tokens` (
+    `id` bigint PRIMARY KEY AUTO_INCREMENT,
     `email` varchar(255) NOT NULL,
     `token` varchar(255) NOT NULL,
-    `created_at` timestamp DEFAULT NULL
+    `created_at` timestamp DEFAULT NULL,
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 CREATE TABLE `personal_access_tokens` (
     `id` bigint PRIMARY KEY AUTO_INCREMENT,
@@ -86,7 +112,8 @@ CREATE TABLE `personal_access_tokens` (
     `last_used_at` timestamp DEFAULT NULL,
     `expires_at` timestamp DEFAULT NULL,
     `created_at` timestamp DEFAULT NULL,
-    `updated_at` timestamp DEFAULT NULL
+    `updated_at` timestamp DEFAULT NULL,
+    `deleted_at` timestamp DEFAULT null
 );
 ALTER TABLE `viajes`
 ADD FOREIGN KEY (`persona_ofrece_id`) REFERENCES `users` (`id`);
