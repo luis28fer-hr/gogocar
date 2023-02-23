@@ -1,6 +1,7 @@
-<form action="{{route('viajes.auto.eliminar')}}" method="POST">
+<form action="{{route('viajes.auto.eliminar', $auto->id)}}" method="POST">
     @csrf
-    <div class="modal modal-eliminarAuto" id="modal-autoEliminaf">
+    @method("DELETE")
+    <div class="modal modal-eliminarAuto" id="modal-autoEliminaf-{{$auto->id}}">
     <div class="__header">
         <div class="__icon-eliminar">
             <i class="fa-solid fa-car"></i>

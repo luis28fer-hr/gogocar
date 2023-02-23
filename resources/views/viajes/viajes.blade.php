@@ -46,8 +46,8 @@
     @include('viajes.modal-crearviaje')
     @include('viajes.modal-solicitarViaje')
     @include('autos.modal-agregarAuto')
-    @include('autos.modal-editarAuto')
-    @include('autos.modal-eliminarAuto')
+    {{-- @include('autos.modal-editarAuto') --}}
+    {{-- @include('autos.modal-eliminarAuto') --}}
 
     <section class="viajes">
 
