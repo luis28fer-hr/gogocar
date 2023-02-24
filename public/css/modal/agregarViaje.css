@@ -104,6 +104,7 @@
     color: #616161;
     margin-bottom: .1rem;
 }
+
 .modal .__body div input{
     width: 97%;
     font-size: 1rem;
@@ -160,6 +161,26 @@
 .modal .__body input:focus{
 
     outline: none;
+}
+
+.modal .__body div .__checks{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.modal .__body .__checkbox{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #616161;
+    padding: .3rem 0.3rem;
+}
+
+.modal .__body div .__checkbox input{
+    width: 30px;
 }
 
 .modal .__footer{

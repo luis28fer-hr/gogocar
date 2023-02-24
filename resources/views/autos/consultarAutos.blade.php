@@ -40,9 +40,9 @@
                     <a class="__solicitar __editar" href="#modal-autoEditar-{{$auto->id}}"><i class="fa-solid fa-pen-to-square"></i>
                         Editar</a>
                 </div>
+                @include('autos.modal-editarAuto')
+                @include('autos.modal-eliminarAuto')
             </div>
-            @include('autos.modal-editarAuto')
-            @include('autos.modal-eliminarAuto')
         @endforeach
 
     </div>

@@ -21,6 +21,8 @@ class StoreUpdateAutoRequest extends FormRequest
             'modelo' => 'required | max:10',
             'capacidad' => 'required | numeric | min:0',
             'no_seguro' => 'required',
+            'activo' => 'required',
+            'verificado'
         ];
     }
 }
