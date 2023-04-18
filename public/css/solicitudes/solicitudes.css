@@ -139,3 +139,92 @@
 .__cuerpo .__botones a:hover{
   transform: translateY(-2px);
 }
+
+
+.tabla_solicitudes{
+    background-color: #FDFEFE;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 0px 2px 2px rgba(52, 152, 219, 1);
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+
+}
+
+.tabla_solicitudes .titulo{
+    background-color: #AEB6BF;
+    padding: 0.7rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.tabla_solicitudes .encabezado{
+    background-color: #CCD1D1;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.tabla_solicitudes .encabezado td{
+    padding: .5rem;
+}
+
+.tabla_solicitudes .datos{
+    background-color: #E5E7E9;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #3498DB;
+}
+
+.tabla_solicitudes .datos td{
+    padding: .4rem 1rem;
+
+}
+
+.tabla_solicitudes .opciones{
+    background-color: #F2F3F4;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.tabla_solicitudes .opciones td{
+    padding: 1rem;
+}
+.tabla_solicitudes .opciones .btn_rechazar{
+    text-decoration: none;
+    background-color: #E74C3C;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-right: .5rem;
+    transition: all 0.3s ease;
+}
+.tabla_solicitudes .opciones .btn_rechazar:hover{
+    background-color: #da4635;
+}
+
+.tabla_solicitudes .opciones .btn_aceptar{
+    text-decoration: none;
+    background-color: #28B463;
+    padding: 0.5rem 1.3rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-left: .5rem;
+    transition: all 0.3s ease;
+
+}
+
+.tabla_solicitudes .opciones .btn_aceptar:hover{
+    background-color: #1daf5a;
+}

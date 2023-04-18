@@ -7,8 +7,8 @@
 {!!
     "<script>
         Swal.fire(
-        'Viaje creado exitosamente',
-        'Viaje dado de alta',
+        'Usted ha creado un viaje exitosamente',
+        'Ahora su viaje esta activo',
         'success'
         )</script>"!!}
 @endif
@@ -17,8 +17,8 @@
 {!!
     "<script>
         Swal.fire(
-        'Auto creado exitosamente',
-        'Auto dado de alta',
+        'Auto agregado exitosamente',
+        'Ahora puede generar viajes con este vehiculo',
         'success'
         )</script>"!!}
 @endif
@@ -43,11 +43,60 @@
         )</script>"!!}
 @endif
 
-    @include('viajes.modal-crearviaje')
-    @include('viajes.modal-solicitarViaje')
-    @include('autos.modal-agregarAuto')
-    @include('autos.modal-editarAuto')
-    @include('autos.modal-eliminarAuto')
+@if (session()->has('bienvenida'))
+{!!"<script> Swal.fire({
+    icon: 'success',
+    title: '¡Bienvenido!',
+    text: 'GoGoCar!',
+    })</script> "!!}
+@endif
+
+@if (session()->has('error_nuevoViaje'))
+{!!"<script> Swal.fire({
+    icon: 'error',
+    title: 'Algo salio mal :/',
+    text: 'Intentelo nuevamente!',
+    })</script> "!!}
+@endif
+
+@if (session()->has('error_viajeDias'))
+{!!"<script> Swal.fire({
+    icon: 'error',
+    title: 'Debe seleccionar al menos un dia :/',
+    text: 'Intentelo nuevamente!',
+    })</script> "!!}
+@endif
+
+@if (session()->has('error_viajeHora'))
+{!!"<script> Swal.fire({
+    icon: 'error',
+    title: 'Debe ingresar la hora :/',
+    text: 'Intentelo nuevamente!',
+    })</script> "!!}
+@endif
+
+
+@if (session()->has('viajeEliminado'))
+{!!
+    "<script>
+        Swal.fire(
+        'Viaje eliminado exitosamente',
+        'El viaje ha sido removido de toda la plataforma',
+        'success'
+        )</script>"!!}
+@endif
+
+
+@if (session()->has('error_yaExistente'))
+{!!"<script> Swal.fire({
+    icon: 'error',
+    title: 'Ya existe una solicitud para este viaje :/',
+    text: 'Espere o cancale su solicitud actual!',
+    })</script> "!!}
+@endif
+
+
+
 
     <section class="viajes">
 
@@ -56,6 +105,9 @@
         @yield('contenido_viajes')
 
     </section>
+
+    @include('viajes.modal-crearviaje')
+    @include('autos.modal-agregarAuto')
 
 @endsection
 

@@ -22,6 +22,30 @@
 
 </head>
 <body>
+    @if (session()->has('PerfilActualizado'))
+    {!!"<script> Swal.fire({
+        icon: 'success',
+        title: '¡Sus datos se han actualizado!',
+        text: 'GoGoCar!',
+        })</script> "!!}
+    @endif
+
+    @if (session()->has('ErrorMatricula'))
+    {!!"<script> Swal.fire({
+        icon: 'info',
+        title: 'La matricula ya existe',
+        text: 'Intentelo nuevamente!',
+        })</script> "!!}
+    @endif
+
+    @if (session()->has('ErrorCorreo'))
+    {!!"<script> Swal.fire({
+        icon: 'info',
+        title: 'El correo ya existe',
+        text: 'Intentelo nuevamente!',
+        })</script> "!!}
+    @endif
+
     @include('plantilla.header')
     <main>
         @yield('contenido')
@@ -29,5 +53,7 @@
     @include('plantilla.footer')
 
 
+
+<script src="{{URL::asset('js/modales.js')}}"></script>
 </body>
 </html>
