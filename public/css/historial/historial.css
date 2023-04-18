@@ -10,5 +10,12 @@
 
 .__historial{
   width: 25%;
-  height: 25rem;
+  height: 28rem;
+}
+
+.historial .__contenedor .__historial .__botones .__pdf{
+    color: #E74C3C;
+    border: 4px solid #E74C3C;
+    font-size: 1.8rem;
+    padding: 0.1rem;
 }

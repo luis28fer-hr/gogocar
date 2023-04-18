@@ -42,3 +42,4 @@ Route::get('solicitudes/personal/rechazar/{id}', [solicitudesControlador::class,
 
 
 Route::get('historial', [historialControlador::class, 'index'])->name('historial')->middleware('auth');
+Route::get('historial/reporte/{id}', [historialControlador::class, 'reporte'])->name('historial.reporte')->middleware('auth');
