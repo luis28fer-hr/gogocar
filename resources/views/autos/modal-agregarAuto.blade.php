@@ -23,18 +23,14 @@
                 <div class="__horario">
                     <select name="marca" id="marca">
                         <option value="" selected disabled>Seleccione la marca</option>
-                        <option value="Volvo">Volvo</option>
-                        <option value="Volkswagen">Volkswagen</option>
-                        <option value="Toyota">Toyota</option>
-                        <option value="Ford">Ford</option>
-                        <option value="Mercedes-Benz">Mercedes-Benz</option>
-                        <option value="Kia">Kia</option>
                     </select>
                     <span> - </span>
                     <input type="text" name="capacidad" title="Version" placeholder="Capacidad">
                 </div>
                 <div>
-                    <input type="text" name="modelo" value="{{ $auto->modelo }}" placeholder="Modelo">
+                    <select name="modelo" id="modelo">
+                        <option value="" selected disabled>Seleccione el modelo</option>
+                    </select>
                     <input type="file" value="" placeholder="Imagen">
                 </div>
                 {{-- <div class="__checks">

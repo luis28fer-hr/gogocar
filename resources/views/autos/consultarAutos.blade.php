@@ -47,3 +47,53 @@
 
     </div>
 @endsection
+@section('scripts')
+<script>
+    const marcasSelect = document.getElementById('marca');
+    const modelosSelect = document.getElementById('modelo')
+
+    axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json')
+        .then(response => {
+            const marcas = response.data.Results  
+            
+            // Agregar las opciones del select de Marcas
+            marcas.forEach(maker => {
+                const option = document.createElement('option');
+                option.value = maker['Make_Name'];
+                option.textContent = maker['Make_Name'];
+                marcasSelect.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+    });
+
+    /* Evento para trackear los cambios en el select de Marcas */
+    marcasSelect.addEventListener('change', event => {
+        const marcaSeleccionada = event.target.value;
+
+        // Limpiar y desactivar el select de Modelos (porque se va a modificar)
+        modelosSelect.innerHTML = '';
+        modelosSelect.disabled = true;
+
+        if (marcaSeleccionada) { 
+            axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/${marcaSeleccionada}?format=json`)
+                .then(response => {
+                    const modelos = response.data.Results;
+
+                    // Activar y agregar las opciones al select de Modelos
+                    modelosSelect.disabled = false;
+                    modelos.forEach(modelo => {
+                        const option = document.createElement('option');
+                        option.value = modelo['Model_Name'];
+                        option.textContent = modelo['Model_Name'];
+                        modelosSelect.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    });
+</script>
+@endsection
