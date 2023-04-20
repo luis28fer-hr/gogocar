@@ -25,48 +25,8 @@
             </div>
 
             <div class="__horario">
-                <select name="marca" >
-                    <option selected disabled>Seleccione la marca</option>
-                    <option >ABARTH</option>
-                    <option >ALFA ROMEO</option>
-                    <option >ALFA ROMEO (FIAT)</option>
-                    <option >AUDI</option>
-                    <option >BENTLEY</option>
-                    <option >BMW</option>
-                    <option >BYD</option>
-                    <option >CHEVROLET</option>
-                    <option >CITROEN</option>
-                    <option >DFSK</option>
-                    <option >DS</option>
-                    <option >FERRARI</option>
-                    <option >FERRARI (FCA)</option>
-                    <option >FIAT</option>
-                    <option >FORD</option>
-                    <option >HONDA</option>
-                    <option >HYUNDAI</option>
-                    <option >INFINITI</option>
-                    <option >ISUZU</option>
-                    <option >JAGUARC</option>
-                    <option >JEEP</option>
-                    <option >JEEP (FIAT)</option>
-                    <option >KIA</option>
-                    <option >LADA</option>
-                    <option >LAMBORGHINI</option>
-                    <option >LANCIA</option>
-                    <option >LEXUS</option>
-                    <option >MAHINDRA</option>
-                    <option >MAZDA</option>
-                    <option >MERCEDES</option>
-                    <option >MINI</option>
-                    <option >MITSUBISHI</option>
-                    <option >NISSAN</option>
-                    <option >PORSCHE</option>
-                    <option >SEAT</option>
-                    <option >SMART</option>
-                    <option >SUZUKI</option>
-                    <option >TOYOTA</option>
-                    <option >VOLKSWAGEN</option>
-                    <option >VOLVO</option>
+                <select name="marca" id="marca">
+                    <option value="" selected disabled>Seleccione la marca</option>
                 </select>
                 <span> - </span>
                 <input type="text" title="Capacidad del vehiculo" name="capacidad" placeholder="Capacidad" value="{{old('capacidad')}}">
@@ -79,7 +39,9 @@
             </div>
 
             <div class="__horario">
-                <input type="text" value="{{old('modelo')}}" name="modelo" placeholder="Modelo">
+                <select name="modelo" id="modelo">
+                    <option value="" selected disabled>Seleccione el modelo</option>
+                </select>
             </div>
             <div class="__horario">
                 <span class="error">{{$errors->first('modelo')}}</span>

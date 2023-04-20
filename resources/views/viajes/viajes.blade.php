@@ -112,3 +112,105 @@
 @endsection
 
 
+@section('scripts')
+<script>
+    const marcasSelect = document.getElementById('marca');
+    const modelosSelect = document.getElementById('modelo')
+
+    const marcasSelectEdit = document.getElementById('marca1');
+    const modelosSelectEdit = document.getElementById('modelo1')
+
+
+
+
+    axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json')
+        .then(response => {
+            const marcas = response.data.Results
+
+            // Agregar las opciones del select de Marcas
+            marcas.forEach(maker => {
+                const option = document.createElement('option');
+                option.value = maker['Make_Name'];
+                option.textContent = maker['Make_Name'];
+                option.dataset.id = maker['Make_ID'];
+                marcasSelect.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+    });
+
+    axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json')
+        .then(response => {
+            const marcas1 = response.data.Results
+            // Agregar las opciones del select de Marcas
+            marcas1.forEach(maker => {
+                const option1 = document.createElement('option');
+                option1.value = maker['Make_Name'];
+                option1.textContent = maker['Make_Name'];
+                option1.dataset.id = maker['Make_ID'];
+                marcasSelectEdit.appendChild(option1);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+    });
+
+    /* Evento para trackear los cambios en el select de Marcas */
+    marcasSelect.addEventListener('change', event => {
+        const marcaSeleccionada = event.target.options[event.target.selectedIndex];
+        const marcaSeleccionadaID = marcaSeleccionada.dataset.id;
+
+        // Limpiar y desactivar el select de Modelos (porque se va a modificar)
+        modelosSelect.innerHTML = '';
+        modelosSelect.disabled = true;
+
+        if (marcaSeleccionadaID) {
+            axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/${marcaSeleccionadaID}?format=json`)
+                .then(response => {
+                    const modelos = response.data.Results;
+                    // Activar y agregar las opciones al select de Modelos
+                    modelosSelect.disabled = false;
+                    modelos.forEach(modelo => {
+                        const option = document.createElement('option');
+                        option.value = modelo['Model_Name'];
+                        option.textContent = modelo['Model_Name'];
+                        modelosSelect.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    });
+
+    marcasSelectEdit.addEventListener('change', event => {
+        const marcaSeleccionada = event.target.options[event.target.selectedIndex];
+        const marcaSeleccionadaID = marcaSeleccionada.dataset.id;
+
+        // Limpiar y desactivar el select de Modelos (porque se va a modificar)
+        modelosSelectEdit.innerHTML = '';
+        modelosSelectEdit.disabled = true;
+
+        if (marcaSeleccionadaID) {
+            axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/${marcaSeleccionadaID}?format=json`)
+                .then(response => {
+                    const modelos = response.data.Results;
+                    // Activar y agregar las opciones al select de Modelos
+                    modelosSelectEdit.disabled = false;
+                    modelos.forEach(modelo => {
+                        const option = document.createElement('option');
+                        option.value = modelo['Model_Name'];
+                        option.textContent = modelo['Model_Name'];
+                        modelosSelectEdit.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    });
+</script>
+@endsection
+
+
