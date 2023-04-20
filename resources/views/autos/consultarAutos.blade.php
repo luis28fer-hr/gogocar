@@ -51,6 +51,7 @@
 <script>
     const marcasSelect = document.getElementById('marca');
     const modelosSelect = document.getElementById('modelo')
+    
 
     axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/GetAllMakes?format=json')
         .then(response => {
@@ -61,6 +62,7 @@
                 const option = document.createElement('option');
                 option.value = maker['Make_Name'];
                 option.textContent = maker['Make_Name'];
+                option.dataset.id = maker['Make_ID'];
                 marcasSelect.appendChild(option);
             });
         })
@@ -70,14 +72,15 @@
 
     /* Evento para trackear los cambios en el select de Marcas */
     marcasSelect.addEventListener('change', event => {
-        const marcaSeleccionada = event.target.value;
+        const marcaSeleccionada = event.target.options[event.target.selectedIndex];
+        const marcaSeleccionadaID = marcaSeleccionada.dataset.id;
 
         // Limpiar y desactivar el select de Modelos (porque se va a modificar)
         modelosSelect.innerHTML = '';
         modelosSelect.disabled = true;
 
-        if (marcaSeleccionada) { 
-            axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/${marcaSeleccionada}?format=json`)
+        if (marcaSeleccionadaID) { 
+            axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/${marcaSeleccionadaID}?format=json`)
                 .then(response => {
                     const modelos = response.data.Results;
 
