@@ -20,6 +20,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js" integrity="sha512-nnNHpffPSgINrsR8ZAIgFUIMexORL5tPwsfktOTxVYSv+AUAILuFYWES8IHl+hhIhpFGlKvWFiz9ZEusrPcSBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
     @if (session()->has('PerfilActualizado'))
@@ -55,5 +57,7 @@
 
 
 <script src="{{URL::asset('js/modales.js')}}"></script>
+
 </body>
 </html>
+@yield('scripts')

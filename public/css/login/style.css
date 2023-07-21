@@ -11,7 +11,8 @@ body{
     align-items: center;
     justify-content: center;
     height: 90vh;
-    background-color: #FFFFFF;}
+    background-color: #FFFFFF;
+}
 
 .contenedor{
     background-color: #f7f9f9;
@@ -293,4 +294,208 @@ li{
 label::before{
     content: '* ';
     color: red;
+}
+
+
+@media screen and (max-width: 400px) {
+
+
+    body{
+        position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 2rem 0;
+        height: 90vh;
+        background-color: #FFFFFF;}
+
+    .contenedor{
+        background-color: #f7f9f9;
+        width: 80%;
+        border: 3px solid rgba(28, 40, 51, 1);
+        height: 70%;
+        overflow: hidden;
+    }
+
+    .contenedor-registrar{
+        background-color: #f7f9f9;
+        width: 80%;
+        border: 3px solid rgba(28, 40, 51, 1);
+        height: 70%;
+        overflow-x: hidden;
+
+    }
+
+    .logotipo{
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 0vh;
+    }
+
+    .logotipo-registrar{
+
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 0vh;
+    }
+
+
+    svg{
+        opacity: 0;
+        position: absolute;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 0.8rem 0.5rem;
+    }
+
+    .header span{
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .header span i{
+        color: #2ECC71;
+        font-size: 1.1rem;
+    }
+
+    .header ul{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: .5rem;
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+    li{
+        text-decoration: none;
+        list-style: none;
+        padding: .5rem 0.7rem;
+        width: 100%;
+    }
+
+    .header ul .activo {
+        border-left: 4px solid #2ECC71;
+    }
+
+    .header ul .activo .activo_link{
+        color: #2ECC71;
+        font-weight: 700;
+        letter-spacing: .5px;
+    }
+
+    .header ul li a{
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: black;
+
+    }
+
+    .formulario-login{
+        padding: 3rem 1rem;
+        background-color: #f7f9f9;
+    }
+
+    .formulario-registrar{
+        padding: 2rem 1rem;
+        background-color: #f7f9f9;
+    }
+    .formulario-login div{
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .formulario-registrar .datos {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .formulario-registrar .errors {
+        display: flex;
+        align-items: center;
+        margin-top: 0.2rem;
+        margin-bottom: .3rem;
+    }
+
+
+    .formulario-registrar .datos div{
+        width: 100%;
+    }
+    .formulario-registrar .errors div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario-login div label{
+        color: black;
+        font-size: 1rem;
+        letter-spacing: .5px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: .3rem;
+    }
+
+    .formulario-registrar div label{
+        font-size: 1rem;
+        letter-spacing: .5px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: .2rem;
+    }
+
+    .formulario-login div input{
+        padding: .4rem;
+        width: 85%;
+        font-size: 0.9rem;
+        border: none;
+        border-left: 3px solid #2ECC71;
+        font-weight: 600;
+    }
+
+    .formulario-registrar div input{
+        padding: .4rem;
+        width: 85%;
+        font-size: 0.85rem;
+        border: none;
+        border-left: 3px solid #2ECC71;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+
+
+    .formulario-login button{
+        font-size: 1rem;
+        font-weight: 600;
+        padding: .5rem;
+        width: 40%;
+    }
+
+    .formulario-registrar button{
+        margin-top: 1rem;
+        font-size: 1rem;
+        padding: .5rem;
+        width: 50%;
+    }
+
+    .error{
+        display: block;
+        margin-top: 0.2rem;
+        color: red;
+    }
+
+    label::before{
+        content: '* ';
+        color: red;
+    }
+
 }

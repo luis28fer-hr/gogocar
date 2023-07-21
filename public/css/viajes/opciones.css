@@ -73,3 +73,89 @@
 .__opciones-viajes .__opc-conductor .__consultarAutos{
     background-color: #F39C12;
 }
+
+@media screen and (max-width: 400px) {
+
+    .__opciones-viajes{
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .__opciones-viajes div {
+        width: 95%;
+    }
+    .__opciones-viajes .__opc-pasajero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0rem;
+    }
+    .__opciones-viajes .__opc-conductor {
+        margin-top: 0.4rem;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 0.2rem;
+    }
+
+    .__opciones-viajes .__opc-pasajero .__btn{
+        padding: .3rem 1rem;
+        background-color: rgb(197, 197, 197);
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #FFFFFF;
+        transition: all 0.3s ease;
+    }
+    .__opciones-viajes .__opc-pasajero .__todos{
+        background-color: #B2BABB;
+        border-radius: 12px 0 0 12px;
+        border-right: 3px solid #1A5276;
+    }
+    .__opciones-viajes .__opc-pasajero .__mis-viajes{
+        background-color: #B2BABB;
+        border-radius: 0 12px 12px 0;
+    }
+    .__opciones-viajes .__opc-pasajero a:hover{
+        background-color: #3498DB;
+    }
+    .__opciones-viajes .__opc-pasajero .opc-activo{
+        background-color: #3498DB;
+    }
+
+    .__opciones-viajes .__opc-conductor .__btn{
+        margin: 1rem 0rem;
+        padding: .3rem 0.5rem;
+        background-color: rgb(197, 197, 197);
+        font-size: 0.7rem;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+        color: #FFFFFF;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .__opciones-viajes .__opc-conductor .__btn:hover{
+        transform: translateY(-3px);
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .__opciones-viajes .__opc-conductor .__agregarViaje{
+        background-color: #1ABC9C;
+    }
+
+    .__opciones-viajes .__opc-conductor .__agregarAuto{
+        background-color: #1ABC9C;
+    }
+
+    .__opciones-viajes .__opc-conductor .__consultarAutos{
+        background-color: #F39C12;
+    }
+
+
+}
