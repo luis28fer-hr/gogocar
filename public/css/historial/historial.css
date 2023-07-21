@@ -19,3 +19,30 @@
     font-size: 1.8rem;
     padding: 0.1rem;
 }
+
+
+@media screen and (max-width: 400px) {
+    .historial{
+        padding: 1rem;
+    }
+
+    .historial .__bienvenida{
+      padding: 0 0.8rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: justify;
+    }
+
+    .__historial{
+      width: 100%;
+      height: 28rem;
+    }
+
+    .historial .__contenedor .__historial .__botones .__pdf{
+        color: #E74C3C;
+        border: 2px solid #E74C3C;
+        font-size: 1.3rem;
+        padding: 0.3rem 0;
+
+    }
+}

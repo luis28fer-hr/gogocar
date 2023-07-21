@@ -63,3 +63,76 @@ footer .contacto ul a:hover{
     color: #3498DB;
 }
 
+@media screen and (max-width: 400px) {
+
+    footer{
+        position: relative;
+        margin-top: auto;
+        background-color: #ECF0F1;
+        padding: 1rem 1.5rem 3rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+
+    footer div .__derechos{
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0px;
+        margin-bottom: 1rem;
+    }
+    footer .derechos{
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    footer div .__descripcion{
+        font-size: .8rem;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+    footer .contacto{
+        width: 100%;
+        text-align: right;
+    }
+
+    footer .contacto .__titulo{
+        font-size: 1rem;
+        font-weight: 900;
+        letter-spacing: .5px;
+        margin-bottom: 1rem;
+    }
+
+    footer .contacto .__titulo i{
+        font-size: 1rem;
+        margin-right: .5rem;
+        color: #2ECC71;
+    }
+
+    footer .contacto ul{
+        list-style: none;
+    }
+    footer .contacto ul a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0px;
+        font-weight: 600;
+        color: #000000;
+        transition: all 0.3s ease;
+    }
+    footer .contacto ul a i{
+        font-size: 0.8rem;
+        margin-right: .3rem;
+    }
+
+    footer .contacto ul a:hover{
+        font-size: 0.7rem;
+        margin-right: .3rem;
+        color: #3498DB;
+    }
+
+
+}
