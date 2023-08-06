@@ -17,13 +17,14 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('matricula')->unique();
             $table->string('name');
-            $table->string('apellido_p');
-            $table->string('apellido_m');
-            $table->bigInteger('telefono');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('apellido_paterno');
+            $table->string('apellido_materno');
+            $table->bigInteger('telefono');
+            $table->boolean('es_pasajero');
             $table->timestamps();
         });
     }

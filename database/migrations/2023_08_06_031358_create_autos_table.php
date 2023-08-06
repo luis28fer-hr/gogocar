@@ -15,20 +15,23 @@ return new class extends Migration
     {
         Schema::create('autos', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('placa')->unique();
-            $table->string('version');
-            $table->string('marca');
-            $table->integer('capacidad');
-            $table->string('modelo');
-            $table->string('foto')->nullable();
             $table->unsignedBigInteger('user_id');
-
+            $table->string('placa')->unique();
+            $table->integer('marca_id');
+            $table->string('marca');
+            $table->integer('modelo_id');
+            $table->string('modelo');
+            $table->integer('capacidad');
+            $table->string('no_seguro');
+            $table->string('foto')->nullable();
+            $table->boolean('verificado');
+            $table->boolean('activo');
             $table->timestamps();
 
-            $table->foreign("user_id")
-            ->references("id")
-            ->on("users")
-            ->onDelete("cascade");
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
@@ -39,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('autos');
     }
 };
