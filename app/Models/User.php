@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -23,7 +24,7 @@ class User extends Authenticatable
         'password',
         'matricula',
         'apellido_paterno',
-        'apellido_materno', 
+        'apellido_materno',
         'telefono',
         'es_pasajero'
     ];
@@ -46,4 +47,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function autos(): HasMany
+    {
+        return $this->hasMany(Auto::class, 'user_id');
+    }
+
+    public function calificaciones(): HasMany
+    {
+        return $this->hasMany(Calificacion::class, 'usuario_califica_id');
+    }
+
+    public function solicitudes(): HasMany
+    {
+        return $this->hasMany(Solicitud::class, 'user_id');
+    }
+
+    public function viajesOfrecidos(): HasMany
+    {
+        return $this->hasMany(Viaje::class, 'usuario_ofrece_id');
+    }
 }
