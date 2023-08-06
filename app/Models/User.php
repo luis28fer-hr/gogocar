@@ -21,6 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'matricula',
+        'apellido_paterno',
+        'apellido_materno', 
+        'telefono',
+        'es_pasajero'
     ];
 
     /**

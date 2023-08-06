@@ -7,15 +7,24 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller 
 {
-    public function register(Request $request)
+    public function register(Request $request): JsonResponse
     {
-        $response = (new UserHelper($request->email, $request->password, $request->name))->register($request->deviceName);
+        $response = (new UserHelper(
+            $request->email, 
+            $request->password, 
+            $request->name,
+            $request->matricula,
+            $request->apellido_paterno,
+            $request->apellido_materno,
+            $request->telefono,
+            $request->es_pasajero
+        ))->register($request->deviceName);
         return response()->json($response);
     }
 
     public function login(Request $request): JsonResponse
     {
-        $response = (new UserHelper($request->email, $request->password, ''))->login($request->deviceName);
+        $response = (new UserHelper($request->email, $request->password, '', '', '', '', '', ''))->login($request->deviceName);
         return response()->json($response);
     }
 }
